@@ -12,7 +12,7 @@ class Configuration implements ConfigurationInterface
 
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('corytech_openapi');
+        $treeBuilder = new TreeBuilder('corytech_open_api');
         $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
