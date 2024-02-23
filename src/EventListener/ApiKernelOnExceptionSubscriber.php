@@ -12,6 +12,7 @@ use Corytech\OpenApi\Exception\ApiException;
 use Corytech\OpenApi\Exception\MissingConstructorArgumentsApiException;
 use Corytech\OpenApi\Exception\NotNormalizableRequestApiException;
 use Corytech\OpenApi\Exception\ValidationApiException;
+use Corytech\Tracing\GlobalExceptionCatcher;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,8 +29,7 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
     public function __construct(
         private readonly SerializerInterface $serializer,
         private readonly array $requestPathPrefixes,
-        // todo:
-//        private readonly GlobalExceptionCatcher $exceptionCatcher,
+        private readonly ?GlobalExceptionCatcher $exceptionCatcher,
     ) {
     }
 
@@ -93,8 +93,7 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
         }
 
         if ($errorCode === CommonApiErrorCode::Unknown) {
-            // todo:
-//            $this->exceptionCatcher->captureException($throwable);
+            $this->exceptionCatcher?->captureException($throwable);
         }
 
         return JsonResponse::fromJsonString($this->serializer->serialize(
