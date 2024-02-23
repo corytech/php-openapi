@@ -1,0 +1,25 @@
+{
+  "name": "corytech/php-openapi",
+  "type": "library",
+  "description": "OpenApi library",
+  "keywords": ["openapi","swagger"],
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.49",
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Corytech\\OpenApi\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Corytech\\OpenApi\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev"
+}
