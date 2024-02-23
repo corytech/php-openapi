@@ -18,6 +18,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->arrayNode('handle_exceptions_on_path_prefixes')
+                    ->isRequired()
                     ->scalarPrototype()->end()
                 ->beforeNormalization()->castToArray()->end()
         ;
