@@ -14,4 +14,9 @@ readonly class ResponseError
         public ?array $validationErrors = null,
     ) {
     }
+
+    public function getCode(): string
+    {
+        return $this->code->getCode();
+    }
 }
