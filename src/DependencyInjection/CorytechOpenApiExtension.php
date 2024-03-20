@@ -24,6 +24,5 @@ class CorytechOpenApiExtension extends Extension
         $container
             ->getDefinition(ApiKernelOnExceptionSubscriber::class)
             ->setArgument('$requestPathPrefixes', $config['handle_exceptions_on_path_prefixes']);
-
     }
 }
