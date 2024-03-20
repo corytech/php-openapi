@@ -9,7 +9,6 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class CorytechOpenApiExtension extends Extension
 {
@@ -25,6 +24,5 @@ class CorytechOpenApiExtension extends Extension
         $container
             ->getDefinition(ApiKernelOnExceptionSubscriber::class)
             ->setArgument('$requestPathPrefixes', $config['handle_exceptions_on_path_prefixes']);
-
     }
 }
