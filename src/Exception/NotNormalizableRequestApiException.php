@@ -18,7 +18,7 @@ class NotNormalizableRequestApiException extends ApiException
         private readonly string $currentType,
         private readonly bool $useMessageForUser,
         string $message,
-        ?\Throwable $previous = null
+        ?\Throwable $previous = null,
     ) {
         parent::__construct($message, previous: $previous);
     }

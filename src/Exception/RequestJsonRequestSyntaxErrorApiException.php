@@ -10,7 +10,7 @@ use Corytech\OpenApi\DTO\CommonApiErrorCode;
 class RequestJsonRequestSyntaxErrorApiException extends ApiException
 {
     public function __construct(
-        ?\Throwable $previous = null
+        ?\Throwable $previous = null,
     ) {
         parent::__construct(previous: $previous);
     }

@@ -9,7 +9,7 @@ class DateTimeRequestProperty extends Property
 {
     public function __construct(...$args)
     {
-        $args['format'] = sprintf('ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
+        $args['format'] = \sprintf('ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
         $args['example'] = (new \DateTime())
             ->setTimezone(new \DateTimeZone('UTC'))
             ->format(\DateTimeInterface::ATOM);

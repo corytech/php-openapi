@@ -11,7 +11,7 @@ class MissingConstructorArgumentsApiException extends ApiException
 {
     public function __construct(
         private readonly array $missingArguments,
-        ?\Throwable $previous = null
+        ?\Throwable $previous = null,
     ) {
         parent::__construct(previous: $previous);
     }
