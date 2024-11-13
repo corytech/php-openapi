@@ -12,7 +12,7 @@ class ValidationApiException extends ApiException
 {
     public function __construct(
         private readonly ConstraintViolationListInterface $errors,
-        ?\Throwable $previous = null
+        ?\Throwable $previous = null,
     ) {
         parent::__construct(previous: $previous);
     }

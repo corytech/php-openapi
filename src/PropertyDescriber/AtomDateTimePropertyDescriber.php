@@ -14,7 +14,7 @@ class AtomDateTimePropertyDescriber extends DateTimePropertyDescriber
     public function describe(array $types, OA\Schema $property, ?array $groups = null, ?OA\Schema $schema = null, array $context = []): void
     {
         parent::describe($types, $property, $groups, $schema, $context);
-        $property->format = sprintf('UTC ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
+        $property->format = \sprintf('UTC ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
         $property->example = (new \DateTimeImmutable(timezone: new \DateTimeZone('UTC')))
             ->format(\DateTimeInterface::ATOM);
     }

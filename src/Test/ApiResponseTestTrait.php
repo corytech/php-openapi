@@ -60,7 +60,7 @@ trait ApiResponseTestTrait
             $grouped[$validationErrorItem['field']][] = $validationErrorItem['message'];
         }
 
-        $assertMessage = sprintf(
+        $assertMessage = \sprintf(
             'Expected validation set `%s`, `%s` given',
             json_encode($expectedNotValidFields, \JSON_THROW_ON_ERROR),
             json_encode($grouped, \JSON_THROW_ON_ERROR),

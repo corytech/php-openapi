@@ -48,7 +48,7 @@ abstract class AbstractResponse extends OA\Response
                     ),
                     new OA\Property(
                         property: 'validationErrors',
-                        description: sprintf('Validation errors when error.code is `%s`', CommonApiErrorCode::Validation->getCode()),
+                        description: \sprintf('Validation errors when error.code is `%s`', CommonApiErrorCode::Validation->getCode()),
                         type: 'array',
                         items: new OA\Items(
                             ref: new Model(type: ValidationErrorItem::class)

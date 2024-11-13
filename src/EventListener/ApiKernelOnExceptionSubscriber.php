@@ -83,7 +83,7 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
         } elseif ($throwable instanceof NotNormalizableRequestApiException) {
             $message = $throwable->isUseMessageForUser()
                 ? $throwable->getMessage()
-                : sprintf(
+                : \sprintf(
                     'Cannot unmarshal value. `%s` expected, `%s` given',
                     implode(', ', $throwable->getExpectedTypes()),
                     $throwable->getCurrentType(),
