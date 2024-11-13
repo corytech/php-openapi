@@ -5,7 +5,9 @@
   "keywords": ["openapi","swagger"],
   "license": "MIT",
   "require": {
-    "php": ">=8.2"
+    "php": ">=8.2",
+    "zircote/swagger-php": "^4.2.15",
+    "nelmio/api-doc-bundle": "^4.11"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.49",
