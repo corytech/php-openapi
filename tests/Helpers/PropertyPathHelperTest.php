@@ -12,6 +12,10 @@ class PropertyPathHelperTest extends TestCase
     {
         return [
             [
+                'foo',
+                'foo',
+            ],
+            [
                 'foo[bar][baz]',
                 'foo.bar.baz',
             ],

@@ -8,6 +8,8 @@ final class PropertyPathHelper
 {
     public static function formatPropertyPath(string $propertyPath): string
     {
-        return str_replace('][', '.', trim($propertyPath, '[]'));
+        $path = preg_replace('/\[([^]]+)]/', '.$1', $propertyPath);
+
+        return trim($path, '.');
     }
 }
