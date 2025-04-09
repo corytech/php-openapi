@@ -12,6 +12,7 @@ use Corytech\OpenApi\Exception\ApiException;
 use Corytech\OpenApi\Exception\MissingConstructorArgumentsApiException;
 use Corytech\OpenApi\Exception\NotNormalizableRequestApiException;
 use Corytech\OpenApi\Exception\ValidationApiException;
+use Corytech\OpenApi\Helpers\PropertyPathHelper;
 use Corytech\Tracing\GlobalExceptionCatcher;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -73,9 +74,8 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
         } elseif ($throwable instanceof ValidationApiException) {
             $validationErrors = [];
             foreach ($throwable->getErrors() as $error) {
-                $propertyPath = str_replace('][', '.', trim($error->getPropertyPath(), '[]'));
                 $validationErrors[] = new ValidationErrorItem(
-                    $propertyPath,
+                    PropertyPathHelper::formatPropertyPath($error->getPropertyPath()),
                     (string) $error->getMessage(),
                 );
             }
