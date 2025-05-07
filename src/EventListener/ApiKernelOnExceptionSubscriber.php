@@ -88,7 +88,7 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
                     implode(', ', $throwable->getExpectedTypes()),
                     $throwable->getCurrentType(),
                 );
-            $validationErrors = [new ValidationErrorItem($throwable->getPath(), $message)];
+            $validationErrors = [new ValidationErrorItem(PropertyPathHelper::formatPropertyPath($throwable->getPath()), $message)];
             $errorCode = CommonApiErrorCode::Validation;
         }
 
