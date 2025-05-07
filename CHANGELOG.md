@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/corytech/php-openapi/compare/v1.0.2...v1.0.3) (2025-05-07)
+
+
+### 🐛 Bugfixes
+
+* fix path for NotNormalizableRequestApiException ([7f80e1d](https://github.com/corytech/php-openapi/commit/7f80e1de72e1f521d091297cec9fef05f009e200))
+
 ## [1.0.2](https://github.com/corytech/php-openapi/compare/v1.0.1...v1.0.2) (2025-04-09)
 
 
