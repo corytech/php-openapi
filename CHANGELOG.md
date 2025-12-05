@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/corytech/php-openapi/compare/v2.0.0...v2.0.1) (2025-12-05)
+
+
+### ⬆️ Dependency updates
+
+* upgrade zircote/swagger-php ([1a66ec5](https://github.com/corytech/php-openapi/commit/1a66ec5fa872036e711be18066dcc816593ea88d))
+
 ## [2.0.0](https://github.com/corytech/php-openapi/compare/v1.0.6...v2.0.0) (2025-12-05)
 
 
