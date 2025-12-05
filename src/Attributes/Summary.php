@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Corytech\OpenApi\Attributes;
 
-use OpenApi\Annotations\Operation;
+use Nelmio\ApiDocBundle\Attribute\Operation;
 
 #[\Attribute(\Attribute::TARGET_METHOD)]
 class Summary extends Operation
