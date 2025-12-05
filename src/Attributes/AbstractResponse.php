@@ -7,7 +7,7 @@ namespace Corytech\OpenApi\Attributes;
 use Corytech\OpenApi\DTO\ApiErrorCodeInterface;
 use Corytech\OpenApi\DTO\CommonApiErrorCode;
 use Corytech\OpenApi\DTO\ValidationErrorItem;
-use Nelmio\ApiDocBundle\Annotation\Model;
+use Nelmio\ApiDocBundle\Attribute\Model;
 use OpenApi\Attributes as OA;
 
 abstract class AbstractResponse extends OA\Response
