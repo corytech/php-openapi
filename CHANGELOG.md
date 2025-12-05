@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/corytech/php-openapi/compare/v1.0.6...v2.0.0) (2025-12-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade nelmio/api-doc-bundle
+
+### ⬆️ Dependency updates
+
+* upgrade nelmio/api-doc-bundle ([aae333a](https://github.com/corytech/php-openapi/commit/aae333a4f00395cef0150403ae8dcfbda99313b8))
+
 ## [1.0.6](https://github.com/corytech/php-openapi/compare/v1.0.5...v1.0.6) (2025-12-05)
 
 
