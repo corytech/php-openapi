@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/corytech/php-openapi/compare/v1.0.4...v1.0.5) (2025-12-05)
+
+
+### 🐛 Bugfixes
+
+* fix Summary ([0726827](https://github.com/corytech/php-openapi/commit/0726827fdb57df750d06da6d206d7c49ba7d547a))
+
 ## [1.0.4](https://github.com/corytech/php-openapi/compare/v1.0.3...v1.0.4) (2025-12-05)
 
 
