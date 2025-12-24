@@ -4,23 +4,24 @@ declare(strict_types=1);
 
 namespace Corytech\OpenApi\PropertyDescriber;
 
-use Nelmio\ApiDocBundle\PropertyDescriber\PropertyDescriberInterface;
+use Nelmio\ApiDocBundle\TypeDescriber\TypeDescriberInterface;
 use OpenApi\Annotations as OA;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+use Symfony\Component\TypeInfo\Type;
 
-#[AutoconfigureTag('nelmio_api_doc.object_model.property_describer')]
-class AtomDateTimePropertyDescriber implements PropertyDescriberInterface
+#[AutoconfigureTag('nelmio_api_doc.type_describer', ['priority' => -1001])]
+class AtomDateTimePropertyDescriber implements TypeDescriberInterface
 {
-    public function describe(array $types, OA\Schema $property, ?array $groups = null, ?OA\Schema $schema = null, array $context = []): void
+    public function describe(Type $type, OA\Schema $schema, array $context = []): void
     {
-        $property->type = 'string';
-        $property->format = \sprintf('UTC ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
-        $property->example = (new \DateTimeImmutable(timezone: new \DateTimeZone('UTC')))
+        $schema->type = 'string';
+        $schema->format = \sprintf('UTC ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
+        $schema->example = (new \DateTimeImmutable(timezone: new \DateTimeZone('UTC')))
             ->format(\DateTimeInterface::ATOM);
     }
 
-    public function supports(array $types, array $context = []): bool
+    public function supports(Type $type, array $context = []): bool
     {
-        return \count($types) === 1 && is_a($types[0]->getClassName(), \DateTimeInterface::class, true);
+        return $type instanceof Type\ObjectType && is_a($type->getClassName(), \DateTimeInterface::class, true);
     }
 }

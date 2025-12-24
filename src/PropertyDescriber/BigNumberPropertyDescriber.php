@@ -5,22 +5,25 @@ declare(strict_types=1);
 namespace Corytech\OpenApi\PropertyDescriber;
 
 use Corytech\BigNumber\BigNumber;
-use Nelmio\ApiDocBundle\PropertyDescriber\PropertyDescriberInterface;
+use Nelmio\ApiDocBundle\TypeDescriber\TypeDescriberInterface;
 use OpenApi\Annotations as OA;
+use OpenApi\Generator;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+use Symfony\Component\TypeInfo\Type;
 
-#[AutoconfigureTag('nelmio_api_doc.object_model.property_describer')]
-class BigNumberPropertyDescriber implements PropertyDescriberInterface
+#[AutoconfigureTag('nelmio_api_doc.type_describer', ['priority' => -1001])]
+class BigNumberPropertyDescriber implements TypeDescriberInterface
 {
-    public function describe(array $types, OA\Schema $property, ?array $groups = null, ?OA\Schema $schema = null, array $context = []): void
+    public function describe(Type $type, OA\Schema $schema, array $context = []): void
     {
-        $property->type = 'string';
-        $property->format = 'Number';
-        $property->example = '10.23';
+        $schema->type = 'string';
+        $schema->format = 'Number';
+        $schema->example = '10.23';
+        $schema->ref = Generator::UNDEFINED;
     }
 
-    public function supports(array $types, array $context = []): bool
+    public function supports(Type $type, array $context = []): bool
     {
-        return \count($types) === 1 && $types[0]->getClassName() === BigNumber::class;
+        return $type instanceof Type\ObjectType && $type->getClassName() === BigNumber::class;
     }
 }
