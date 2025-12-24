@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/corytech/php-openapi/compare/v2.0.1...v2.0.2) (2025-12-24)
+
+
+### 🧰 Maintenance
+
+* migrate to TypeDescriberInterface ([fa2c55a](https://github.com/corytech/php-openapi/commit/fa2c55aae355c45f66383344caa6d1e1aee26227))
+
 ## [2.0.1](https://github.com/corytech/php-openapi/compare/v2.0.0...v2.0.1) (2025-12-05)
 
 
