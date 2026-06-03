@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/corytech/php-openapi/compare/v2.0.2...v2.0.3) (2026-06-03)
+
+
+### 🧰 Maintenance
+
+* **CPD-7985:** Migrate GitHub Actions to Node 24 runtime ([#13](https://github.com/corytech/php-openapi/issues/13)) ([b76e6d5](https://github.com/corytech/php-openapi/commit/b76e6d5c3c4d9138c1876c652d62c65455b1992c))
+
 ## [2.0.2](https://github.com/corytech/php-openapi/compare/v2.0.1...v2.0.2) (2025-12-24)
 
 
