@@ -16,7 +16,7 @@ class AtomDateTimePropertyDescriber implements TypeDescriberInterface
     {
         $schema->type = 'string';
         $schema->format = \sprintf('UTC ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
-        $schema->example = (new \DateTimeImmutable(timezone: new \DateTimeZone('UTC')))
+        $schema->example = (new \DateTimeImmutable('1985-10-26 01:21:00', timezone: new \DateTimeZone('UTC')))
             ->format(\DateTimeInterface::ATOM);
     }
 
