@@ -15,9 +15,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Composer
-        uses: php-actions/composer@v6
+        uses: php-actions/composer@8a65f0d3c6a1d17ca4800491a40b5756a4c164f3 # v6.1.2
       - name: Check cs
         run: vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php -v --diff --dry-run --using-cache=no .
   tests:
@@ -26,8 +26,8 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Composer
-        uses: php-actions/composer@v6
+        uses: php-actions/composer@8a65f0d3c6a1d17ca4800491a40b5756a4c164f3 # v6.1.2
       - name: Run tests
         run: vendor/bin/phpunit tests
