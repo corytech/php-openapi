@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.5](https://github.com/corytech/php-openapi/compare/v2.0.4...v2.0.5) (2026-08-04)
+
+
+### 🧰 Maintenance
+
+* **CPD-8393:** Pin external actions with SHA ([#17](https://github.com/corytech/php-openapi/issues/17)) ([0315c91](https://github.com/corytech/php-openapi/commit/0315c91d3769e6a39c9d4673de8fd71890c0211b))
+
 ## [2.0.4](https://github.com/corytech/php-openapi/compare/v2.0.3...v2.0.4) (2026-07-06)
 
 
