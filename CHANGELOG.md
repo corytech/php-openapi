@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.7](https://github.com/corytech/php-openapi/compare/v2.0.6...v2.0.7) (2026-11-10)
+
+
+### 🧰 Maintenance
+
+* freeze request datetime example ([#22](https://github.com/corytech/php-openapi/issues/22)) ([d4aea66](https://github.com/corytech/php-openapi/commit/d4aea6679732aec152d44869181855ddc485ce76))
+
 ## [2.0.6](https://github.com/corytech/php-openapi/compare/v2.0.5...v2.0.6) (2026-11-10)
 
 
