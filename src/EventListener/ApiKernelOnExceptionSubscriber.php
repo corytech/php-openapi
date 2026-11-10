@@ -88,7 +88,7 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
                     implode(
                         ', ',
                         array_map(
-                            fn (string $t) => (class_exists($t) || interface_exists($t)) ? 'object' : $t,
+                            static fn (string $t) => (class_exists($t) || interface_exists($t)) ? 'object' : $t,
                             $throwable->getExpectedTypes(),
                         )
                     ),
