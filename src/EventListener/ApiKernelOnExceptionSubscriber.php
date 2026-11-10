@@ -85,7 +85,13 @@ class ApiKernelOnExceptionSubscriber implements EventSubscriberInterface
                 ? $throwable->getMessage()
                 : \sprintf(
                     'Cannot unmarshal value. `%s` expected, `%s` given',
-                    implode(', ', $throwable->getExpectedTypes()),
+                    implode(
+                        ', ',
+                        array_map(
+                            fn (string $t) => (class_exists($t) || interface_exists($t)) ? 'object' : $t,
+                            $throwable->getExpectedTypes(),
+                        )
+                    ),
                     $throwable->getCurrentType(),
                 );
             $validationErrors = [new ValidationErrorItem(PropertyPathHelper::formatPropertyPath($throwable->getPath()), $message)];
