@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.6](https://github.com/corytech/php-openapi/compare/v2.0.5...v2.0.6) (2026-11-10)
+
+
+### 🐛 Bugfixes
+
+* fix DTO naming exposing in validation errors ([#20](https://github.com/corytech/php-openapi/issues/20)) ([36bd3eb](https://github.com/corytech/php-openapi/commit/36bd3eb7ff58daf24148183737806af103b61414))
+
+
+### 🧰 Maintenance
+
+* **CPD-8444:** protect main with a ruleset ([#19](https://github.com/corytech/php-openapi/issues/19)) ([7d539b4](https://github.com/corytech/php-openapi/commit/7d539b4bcf60807e367b6485431c8aaff689476a))
+
 ## [2.0.5](https://github.com/corytech/php-openapi/compare/v2.0.4...v2.0.5) (2026-08-04)
 
 
