@@ -10,8 +10,7 @@ class DateTimeRequestProperty extends Property
     public function __construct(...$args)
     {
         $args['format'] = \sprintf('ISO-8601/RFC3339 date-time "%s"', \DateTimeInterface::ATOM);
-        $args['example'] = (new \DateTime())
-            ->setTimezone(new \DateTimeZone('UTC'))
+        $args['example'] = (new \DateTimeImmutable('1985-10-26 01:21:00', timezone: new \DateTimeZone('UTC')))
             ->format(\DateTimeInterface::ATOM);
         parent::__construct(...$args);
     }
